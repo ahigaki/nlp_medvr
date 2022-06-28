@@ -28,8 +28,7 @@ clusters = KMeans(n_clusters=2, random_state=0).fit_predict(vect_abs)
 
 i=0
 for doc, cls in zip(abs_ls, clusters):
-    if cls == 0:
-        print("Cluster:",cls, doc[:200])
+    print("Cluster:",cls, doc[:200])
     i+=1
     if i==30:
         break
